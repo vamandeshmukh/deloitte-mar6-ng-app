@@ -11,10 +11,8 @@ export class DeleteComponent implements OnInit {
             this.shouldBeDisabled = false;
         }, 3000);
     }
-
     someData = 'Sonu';
     shouldBeDisabled = true;
-
 }
 
 
