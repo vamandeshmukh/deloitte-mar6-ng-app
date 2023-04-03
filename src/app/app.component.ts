@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DeleteComponent } from './components/delete.component';
+import { DeleteComponent } from './components/delete/delete.component';
 import { EmpComponent } from './components/emp/emp.component';
 
 DeleteComponent
