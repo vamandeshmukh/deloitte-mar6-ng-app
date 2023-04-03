@@ -1,25 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-delete',
     templateUrl: './delete.component.html'
 })
-export class DeleteComponent {
+export class DeleteComponent implements OnInit {
+
+    ngOnInit(): void {
+        setTimeout(() => {
+            this.shouldBeDisabled = false;
+        }, 3000);
+    }
 
     someData = 'Sonu';
+    shouldBeDisabled = true;
 
-    shouldBeDisabled = false;
-
-    
 }
 
 
-// data binding - 
+// lifecycle hooks
 
-// interpolation - component to template 
-// property binding - component to template 
+// data binding -
 
-// event binding - template to component  
+// interpolation {{}} - component to template
+// property binding []=""  - component to template
+
+// event binding - template to component
 
 // two -way  binding - two way 
 
