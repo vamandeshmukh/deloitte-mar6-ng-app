@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'deloitte-mar6-ng-app';
+  myName = 'Sonu';
 }
