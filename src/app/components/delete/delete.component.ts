@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-delete',
-    template: '<p>Delete component works!</p>'
+    templateUrl: './delete.component.html'
 })
 export class DeleteComponent {
 
