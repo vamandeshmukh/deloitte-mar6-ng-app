@@ -12,6 +12,8 @@ export class LoginComponent {
     password: ''
   };
 
+  submitLogin = () => { };
+
   welcomeMessage = '';
 
 }
