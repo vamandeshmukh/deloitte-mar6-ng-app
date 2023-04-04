@@ -10,10 +10,10 @@ export class DeleteComponent implements OnInit {
     shouldBeDisabled = true;
     userName = '';
 
-    enterUserName = (evt: any) => {
-        this.userName = evt.target.value;
-        console.log(evt.target.value);
-    };
+    // enterUserName = (evt: any) => {
+    //     this.userName = evt.target.value;
+    //     console.log(evt.target.value);
+    // };
 
     actOnClick = () => {
         console.log('clicked!');
