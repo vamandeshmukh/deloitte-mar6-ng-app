@@ -24,7 +24,6 @@ export class DeleteComponent implements OnInit {
 // property binding []=""  - component to template
 
 // event binding - template to component
-
 // two -way  binding - two way 
 
 
