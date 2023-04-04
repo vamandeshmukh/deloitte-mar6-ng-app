@@ -7,6 +7,8 @@ import { DeleteComponent } from './components/delete/delete.component';
 import { EmpComponent } from './components/emp/emp.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { LoginComponent } from './components/login/login.component';
     EmpComponent,
     DeleteComponent,
     BlogComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // include this for ngModel 
   ],
   providers: [],
   bootstrap: [AppComponent]

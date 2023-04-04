@@ -9,8 +9,9 @@
 
   <p>User name: {{userName}}</p>
 
-  <input (keypress)="enterUserName($event)" />
+  <!-- <input (keypress)="enterUserName($event)" /> -->
 
+  <input [(ngModel)]="userName"/>
 
 
 </div>
