@@ -13,36 +13,30 @@ export class LoginComponent {
 
   constructor(private http: HttpClient) { }
 
-  loginInput = {
+  loginInput: any = {
     username: '',
     password: ''
   };
-
-  isLoggedIn = false;
-
+  loginUrl: string = 'https://jsonplaceholder.typicode.com/users/';
+  isLoggedIn: boolean = false;
   welcomeMessage: any = '';
 
   submitLogin = () => {
-
-    this.http.get('https://jsonplaceholder.typicode.com/users/')
+    this.http.get(this.loginUrl)
       .subscribe((resp: any) => {
-        console.log(resp);
         resp.forEach((element: any) => {
           if (element.username === this.loginInput.username) {
             this.isLoggedIn = true;
           }
-          if (this.isLoggedIn) {
-            console.log(this.loginInput.username);
-            this.welcomeMessage = 'Logged in successfully!';
-          }
-          else {
-            this.welcomeMessage = 'Invalid Credentials!';
-          }
-          this.loginInput = { username: '', password: '' }; // clear form values
         });
+        this.welcomeMessage = (this.isLoggedIn) ? 'Hi ' + this.loginInput.username + '!' : 'Invalid credentials!';
+        this.loginInput = { username: '', password: '' }; // clear form values
+        this.isLoggedIn = false;
+
       });
   };
 }
+
 
 // import { Component } from '@angular/core';
 
