@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+import { HomeComponent } from './components/home/home.component';
 
 // @Injectable()
 
@@ -24,7 +25,8 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     LoginComponent,
     RegisterComponent,
     BlogListComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
