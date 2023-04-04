@@ -7,12 +7,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  login = {
+  loginInput = {
     username: '',
     password: ''
   };
 
-  submitLogin = () => { };
+  submitLogin = (evt: any) => {
+    this.welcomeMessage = this.loginInput.username;
+  };
 
   welcomeMessage = '';
 
