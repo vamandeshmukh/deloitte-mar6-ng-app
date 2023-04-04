@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-blog-list',
@@ -7,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogListComponent implements OnInit {
 
-  constructor() { };
+  allBlogsList: any = [];
+
+  constructor(private blogService: BlogService) {
+
+  };
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+    this.blogService.getAllBlogs()
+      .subscribe((resp: any) => {
+        console.log(resp.length);
+        this.allBlogsList = resp;
+      });
   }
 
 }
+
