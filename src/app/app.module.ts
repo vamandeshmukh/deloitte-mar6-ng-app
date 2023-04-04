@@ -11,7 +11,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-@NgModule({
+// @Injectable()
+
+@NgModule( {
   declarations: [
     AppComponent,
     EmpComponent,
@@ -28,5 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [],
   bootstrap: [AppComponent]
-})
-export class AppModule { }
+}  )
+export class AppModule { 
+
+}

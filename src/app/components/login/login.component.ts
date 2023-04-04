@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class LoginComponent {
 
-  constructor(private http: HttpClient) { }
+  constructor(private userService: UserService) { }
 
   loginInput: any = {
     username: '',
@@ -22,7 +22,7 @@ export class LoginComponent {
   welcomeMessage: any = '';
 
   submitLogin = () => {
-    this.http.get(this.loginUrl)
+    this.userService.login(this.loginInput)
       .subscribe((resp: any) => {
         resp.forEach((element: any) => {
           if (element.username === this.loginInput.username) {
@@ -35,6 +35,45 @@ export class LoginComponent {
       });
   };
 }
+
+
+// import { Component } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+
+// @Component({
+//   selector: 'app-login',
+//   templateUrl: './login.component.html',
+//   styleUrls: ['./login.component.css']
+// })
+
+// // client to make HTTP requests 
+
+// export class LoginComponent {
+
+//   constructor(private http: HttpClient) { }
+
+//   loginInput: any = {
+//     username: '',
+//     password: ''
+//   };
+//   loginUrl: string = 'https://jsonplaceholder.typicode.com/users/';
+//   isLoggedIn: boolean = false;
+//   welcomeMessage: any = '';
+
+//   submitLogin = () => {
+//     this.http.get(this.loginUrl)
+//       .subscribe((resp: any) => {
+//         resp.forEach((element: any) => {
+//           if (element.username === this.loginInput.username) {
+//             this.isLoggedIn = true;
+//           }
+//         });
+//         this.welcomeMessage = (this.isLoggedIn) ? 'Hi ' + this.loginInput.username + '!' : 'Invalid credentials!';
+//         this.loginInput = { username: '', password: '' }; // clear form values
+//         this.isLoggedIn = false;
+//       });
+//   };
+// }
 
 
 // import { Component } from '@angular/core';
