@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  login = {
+    username: '',
+    password: ''
+  };
+
+  welcomeMessage = '';
+
 }
