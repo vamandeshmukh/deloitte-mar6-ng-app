@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteComponent implements OnInit {
 
+    actOnClick = () => {
+        console.log('clicked!');
+    };
+
     ngOnInit(): void {
         setTimeout(() => {
             this.shouldBeDisabled = false;
@@ -23,7 +27,15 @@ export class DeleteComponent implements OnInit {
 // interpolation {{}} - component to template
 // property binding []=""  - component to template
 
-// event binding - template to component
-// two -way  binding - two way 
+// event binding ()="" - template to component
+// two-way binding [()]="" - two way
 
+// services in angular
+// connect to backend service
+// routing in angular
 
+// directives in angular
+// decorators in angular
+// lifecycle hooks
+
+// testing 
