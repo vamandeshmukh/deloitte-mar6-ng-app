@@ -9,6 +9,10 @@ export class DeleteComponent implements OnInit {
     someData = 'Sonu';
     shouldBeDisabled = true;
     userName = '';
+    shouldShow: boolean = false;
+
+    myFriends = ['Sonu', 'Monu', 'Tonu'];
+
 
     // enterUserName = (evt: any) => {
     //     this.userName = evt.target.value;
@@ -22,6 +26,7 @@ export class DeleteComponent implements OnInit {
     ngOnInit(): void {
         setTimeout(() => {
             this.shouldBeDisabled = false;
+            this.shouldShow = true;
         }, 3000);
     }
 }
@@ -37,12 +42,24 @@ export class DeleteComponent implements OnInit {
 // event binding ()="" - template to component
 // two-way binding [()]="" - two way
 
-// services in angular
 // connect to backend service
-// routing in angular
 
 // directives in angular
+
 // decorators in angular
 // lifecycle hooks
 
-// testing 
+// services in angular
+// routing in angular
+
+
+// testing
+
+// directives == instruction to DOM
+
+// types of directives  - 3
+// components
+// strctural directives - ngIf
+// 
+
+

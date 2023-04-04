@@ -32,7 +32,6 @@ export class LoginComponent {
         this.welcomeMessage = (this.isLoggedIn) ? 'Hi ' + this.loginInput.username + '!' : 'Invalid credentials!';
         this.loginInput = { username: '', password: '' }; // clear form values
         this.isLoggedIn = false;
-
       });
   };
 }
