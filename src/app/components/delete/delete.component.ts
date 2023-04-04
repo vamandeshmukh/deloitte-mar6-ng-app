@@ -59,7 +59,7 @@ export class DeleteComponent implements OnInit {
 
 // types of directives  - 3
 // components
-// strctural directives - ngIf
-// 
+// strctural directives - ngIf, ngFor
+// attribute directives - 
 
 
