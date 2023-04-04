@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteComponent implements OnInit {
 
+    userName = '';
+
+    enterUserName = (evt: any) => {
+        this.userName = evt.target.value;
+        console.log(evt.target.value);
+    };
+
     actOnClick = () => {
         console.log('clicked!');
     };
