@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent {
 
   loginInput = {
@@ -12,10 +13,11 @@ export class LoginComponent {
     password: ''
   };
 
-  submitLogin = (evt: any) => {
-    this.welcomeMessage = this.loginInput.username;
-  };
-
   welcomeMessage = '';
+
+  submitLogin = (evt: any) => {
+    this.welcomeMessage = 'Hi ' + this.loginInput.username + '!'; //
+    this.loginInput = { username: '', password: '' }; // clear form values 
+  }
 
 }

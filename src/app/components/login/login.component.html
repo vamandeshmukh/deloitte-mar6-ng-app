@@ -1,12 +1,13 @@
 <p>login works!</p>
 <div>
-    <p>{{loginInput.username}}</p>
-    <p> {{welcomeMessage}} </p>
+    <p>Input: {{loginInput.username}}</p>
+    <p>Output: {{welcomeMessage}} </p>
 </div>
 
-<form>
-
-
-
-
+<form (submit)="submitLogin($event)">
+    <input type="text" name="username" [(ngModel)]="loginInput.username" />
+    <br />
+    <input type="password" name="password" [(ngModel)]="loginInput.password" />
+    <br />
+    <input type="submit" value="Login" />
 </form>
