@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteComponent implements OnInit {
 
+    someData = 'Sonu';
+    shouldBeDisabled = true;
     userName = '';
 
     enterUserName = (evt: any) => {
@@ -22,8 +24,6 @@ export class DeleteComponent implements OnInit {
             this.shouldBeDisabled = false;
         }, 3000);
     }
-    someData = 'Sonu';
-    shouldBeDisabled = true;
 }
 
 
