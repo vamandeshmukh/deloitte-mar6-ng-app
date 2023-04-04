@@ -60,6 +60,10 @@ export class DeleteComponent implements OnInit {
 // types of directives  - 3
 // components
 // strctural directives - ngIf, ngFor
-// attribute directives - ngModel, ngClass 
+// attribute directives - ngModel, ngClass
+
+// create new component BlogList
+// create new service BlogService
+// display 100 blog titles in the bloglist template 
 
 

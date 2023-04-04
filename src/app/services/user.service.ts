@@ -11,6 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   login = (userDetails: any) => {
+    console.log(userDetails);
     return this.http.get(this.userUrl);
   };
 
@@ -19,8 +20,6 @@ export class UserService {
   // logout = () => { };
 
 }
-
-
 
 // import { HttpClient } from '@angular/common/http';
 // import { Injectable } from '@angular/core';
