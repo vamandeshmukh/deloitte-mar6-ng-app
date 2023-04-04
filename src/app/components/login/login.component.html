@@ -4,10 +4,11 @@
     <p>Output: {{welcomeMessage}} </p>
 </div>
 
-<form (submit)="submitLogin($event)">
+<form (submit)="submitLogin()">
     <input type="text" name="username" [(ngModel)]="loginInput.username" />
     <br />
     <input type="password" name="password" [(ngModel)]="loginInput.password" />
     <br />
     <input type="submit" value="Login" />
 </form>
+ 
