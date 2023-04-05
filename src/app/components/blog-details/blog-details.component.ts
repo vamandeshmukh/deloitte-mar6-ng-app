@@ -27,3 +27,15 @@ export class BlogDetailsComponent implements OnInit {
 
 }
 
+
+
+// assignment - 
+// create two more components - 
+// comments component 
+// writer component 
+// render them in blogdetails component 
+
+
+
+
+
