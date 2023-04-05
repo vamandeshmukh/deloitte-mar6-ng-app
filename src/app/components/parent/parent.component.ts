@@ -1,3 +1,6 @@
+
+
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,7 +11,7 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 
   parentDataInParent: string = 'Sonu';
-  childDataInParent: string = '';
+
 
 }
 
