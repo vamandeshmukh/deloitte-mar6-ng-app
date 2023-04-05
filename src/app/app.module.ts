@@ -17,6 +17,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { WriterComponent } from './components/writer/writer.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { WriteBlogComponent } from './components/write-blog/write-blog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ChildComponent } from './components/child/child.component';
     HeaderComponent,
     FooterComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    WriterComponent,
+    CommentsComponent,
+    WriteBlogComponent
   ],
   imports: [
     BrowserModule,

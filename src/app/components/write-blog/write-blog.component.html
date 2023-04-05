@@ -1,0 +1,9 @@
+<div>
+    <h1>Write a Blog Post</h1>
+    <form (submit)="writeBlogPost()">
+        <input type="text" name="title" [(ngModel)]="writeBlogData.title" placeholder="Please enter blog title">
+        <input type="textarea" name="body" [(ngModel)]="writeBlogData.body" placeholder="Please enter blog body">
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
