@@ -16,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 // @Injectable()
 
@@ -32,7 +34,9 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
