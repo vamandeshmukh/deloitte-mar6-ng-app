@@ -13,6 +13,7 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { EmpComponent } from './components/emp/emp.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,6 +22,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ParentComponent } from './components/parent/parent.component';
 
 const routes: Routes = [
+  { path: 'blog/:id', component: BlogDetailsComponent },
   { path: 'bloglist', component: BlogListComponent },
   { path: 'emp', component: EmpComponent },
   { path: 'home', component: HomeComponent },
