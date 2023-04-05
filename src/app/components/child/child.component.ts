@@ -10,13 +10,15 @@ export class ChildComponent {
   @Input()
   parentDataInChild: string = '';
 
+  childDataInChild: string = 'Monu';
 
   @Output()
-  childDataInChild = new EventEmitter<string>();
+  sendDataToParent = new EventEmitter<string>();
 
-  sendDataToParent(cdtp: string) {
+  cickToSend(cdtp: string) {
     console.log(cdtp);
-    this.childDataInChild.emit(cdtp);
+    this.sendDataToParent.emit(cdtp);
   };
 
 }
+

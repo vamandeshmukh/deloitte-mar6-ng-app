@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { EmpComponent } from './components/emp/emp.component';
-import { BlogComponent } from './components/blog/blog.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
@@ -19,14 +18,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 
-// @Injectable()
-
-@NgModule( {
+@NgModule({
   declarations: [
     AppComponent,
     EmpComponent,
     DeleteComponent,
-    BlogComponent,
     LoginComponent,
     RegisterComponent,
     BlogListComponent,
@@ -46,7 +42,7 @@ import { ChildComponent } from './components/child/child.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
-}  )
-export class AppModule { 
+})
+export class AppModule {
 
 }

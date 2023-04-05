@@ -11,7 +11,7 @@ export class ParentComponent {
 
   childDataInParent: string = '';
 
-  getDataFromChild(cdtp: any) {
+  getDataFromChild(cdtp: string) {
     console.log(cdtp);
     this.childDataInParent = cdtp;
   };

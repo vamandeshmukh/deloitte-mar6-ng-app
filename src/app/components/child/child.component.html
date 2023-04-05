@@ -2,9 +2,10 @@
 
 <div>
     <p>Parent data in child: {{parentDataInChild}}</p>
+    <p>Child data in child: {{childDataInChild}}</p>
 </div>
 <div>
 
-    <button (click)="sendDataToParent('Monu')">Pass Data To Parent</button>
+    <button (click)="cickToSend(childDataInChild)">Pass Data To Parent</button>
 
 </div>
