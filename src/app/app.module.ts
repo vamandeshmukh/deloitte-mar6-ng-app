@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // @Injectable()
 
@@ -26,7 +29,10 @@ import { HomeComponent } from './components/home/home.component';
     RegisterComponent,
     BlogListComponent,
     BlogDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
