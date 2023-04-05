@@ -10,5 +10,7 @@ export class ChildComponent {
   @Input()
   parentDataInChild: string = '';
 
+  @Input()
+  anotherInChild: string = '';
 
 }

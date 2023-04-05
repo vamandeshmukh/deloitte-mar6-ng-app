@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 
   parentDataInParent: string = 'Sonu';
-
+  anotherValue: string = 'Abc';
 
 }
 
