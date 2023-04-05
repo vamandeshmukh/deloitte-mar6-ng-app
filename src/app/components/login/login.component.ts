@@ -6,35 +6,71 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-
-// client to make HTTP requests 
-
 export class LoginComponent {
-
-  constructor(private userService: UserService) { }
 
   loginInput: any = {
     username: '',
     password: ''
   };
-  loginUrl: string = 'https://jsonplaceholder.typicode.com/users/';
-  isLoggedIn: boolean = false;
-  welcomeMessage: any = '';
+
+  welcomeMessage: string = '';
+
+  constructor(private userService: UserService) { }
 
   submitLogin = () => {
     this.userService.login(this.loginInput)
       .subscribe((resp: any) => {
         resp.forEach((element: any) => {
           if (element.username === this.loginInput.username) {
-            this.isLoggedIn = true;
+            this.userService.setUserData(element);
           }
         });
-        this.welcomeMessage = (this.isLoggedIn) ? 'Hi ' + this.loginInput.username + '!' : 'Invalid credentials!';
+        this.welcomeMessage = (this.userService.getUserData().username) ? 'Hi ' + this.userService.getUserData().username + '!' : 'Invalid credentials!';
         this.loginInput = { username: '', password: '' }; // clear form values
-        this.isLoggedIn = false;
       });
   };
 }
+
+
+
+
+// import { Component } from '@angular/core';
+// import { UserService } from 'src/app/services/user.service';
+
+// @Component({
+//   selector: 'app-login',
+//   templateUrl: './login.component.html',
+//   styleUrls: ['./login.component.css']
+// })
+
+// // client to make HTTP requests 
+
+// export class LoginComponent {
+
+//   constructor(private userService: UserService) { }
+
+//   loginInput: any = {
+//     username: '',
+//     password: ''
+//   };
+//   loginUrl: string = 'https://jsonplaceholder.typicode.com/users/';
+//   isLoggedIn: boolean = false;
+//   welcomeMessage: any = '';
+
+//   submitLogin = () => {
+//     this.userService.login(this.loginInput)
+//       .subscribe((resp: any) => {
+//         resp.forEach((element: any) => {
+//           if (element.username === this.loginInput.username) {
+//             this.isLoggedIn = true;
+//           }
+//         });
+//         this.welcomeMessage = (this.isLoggedIn) ? 'Hi ' + this.loginInput.username + '!' : 'Invalid credentials!';
+//         this.loginInput = { username: '', password: '' }; // clear form values
+//         this.isLoggedIn = false;
+//       });
+//   };
+// }
 
 
 // import { Component } from '@angular/core';

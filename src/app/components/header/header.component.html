@@ -1,7 +1,7 @@
 <div>
     <nav>
         <ul>
-            <li><a routerLink="/home">Home</a></li>
+            <li *ngIf="loggedInUserData.username"><a routerLink="/home">Home</a></li>
             <li><a routerLink="/bloglist">BlogList</a></li>
             <li><a routerLink="/write">Write</a></li>
             <li><a routerLink="/emp">Emp</a></li>
@@ -10,3 +10,7 @@
     </nav>
     <hr />
 </div>
+
+
+
+

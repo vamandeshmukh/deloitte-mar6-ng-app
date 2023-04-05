@@ -7,12 +7,33 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   userUrl = 'https://jsonplaceholder.typicode.com/users/';
+  userData: any = { username: '', password: '' };
 
   constructor(private http: HttpClient) { }
+
+  register = (userDetails: any) => {
+    console.log(userDetails);
+    return this.http.post(this.userUrl, userDetails);
+  };
 
   login = (userDetails: any) => {
     console.log(userDetails);
     return this.http.get(this.userUrl);
+  };
+
+  logout = () => {
+    console.log('logout');
+    this.setUserData({ username: '', password: '' });
+  };
+
+  setUserData = (userDetails: any) => {
+    console.log(userDetails);
+    this.userData = userDetails;
+  };
+
+  getUserData = () => {
+    console.log('getUserData');
+    return this.userData;
   };
 
   // register = () => { };
