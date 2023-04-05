@@ -2,7 +2,9 @@
 
 <div>
     <p>Parent data in parent: {{parentDataInParent}}</p>
-    <p>Another: {{anotherValue}}</p>
 
-    <app-child [anotherInChild]="anotherValue" [parentDataInChild]="parentDataInParent"></app-child>
+
+    <!-- <app-child  [parentDataInChild]="parentDataInParent"></app-child> -->
+    <app-child (sendDataFromChildToParent)="getDataFromChild($event)"></app-child>
+
 </div>

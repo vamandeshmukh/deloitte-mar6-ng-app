@@ -8,7 +8,14 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 
   parentDataInParent: string = 'Sonu';
-  anotherValue: string = 'Abc';
+
+  childDataInParent: string = '';
+
+  getDataFromChild(cdtp: any) {
+    console.log(cdtp);
+    this.childDataInParent = cdtp;
+  };
+
 
 }
 
