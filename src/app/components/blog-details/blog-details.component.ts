@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Blog } from 'src/app/models/Blog';
 import { BlogService } from 'src/app/services/blog.service';
 
@@ -7,15 +8,16 @@ import { BlogService } from 'src/app/services/blog.service';
   templateUrl: './blog-details.component.html',
   styleUrls: ['./blog-details.component.css']
 })
+
 export class BlogDetailsComponent implements OnInit {
 
-  blogId: any = 22;
   blogData: Blog = {};
 
-  constructor(private blogService: BlogService) { }
+  constructor(private blogService: BlogService, private activatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.blogService.getBlogById(this.blogId)
+
+    this.blogService.getBlogById(this.activatedroute.snapshot.params['id'])
       .subscribe((resp) => {
         console.log(resp);
         this.blogData = resp;

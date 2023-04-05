@@ -1,6 +1,8 @@
 <div>
     <p>Deloitte Blogs</p>
     <hr />
-    <p *ngFor="let blog of allBlogsList"> {{blog.title}} </p>
-    <app-blog-details  ></app-blog-details>
+    <!-- <p *ngFor="let blog of allBlogsList"> {{blog.title}} </p> -->
+
+    <div *ngFor="let blog of allBlogsList"> <a [routerLink]="['/blog', blog.id]">{{blog.title}} </a> </div>
+
 </div>
