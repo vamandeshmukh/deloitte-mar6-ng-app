@@ -1,9 +1,20 @@
 <div>
     <h1>{{blogData.title}} </h1>
+
     <app-writer *ngIf="blogData.userId" [writerId]="blogData.userId"></app-writer>
 
     <p><span>{{blogData.body}} </span> <span>{{blogData.body}} </span> <span>{{blogData.body}} </span>
-        <span>{{blogData.body}} </span> <span>{{blogData.body}} </span></p>
+        <span>{{blogData.body}} </span> <span>{{blogData.body}} </span>
+    </p>
     <hr />
     <app-comments *ngIf="blogData.id" [blogId]="blogData.id"></app-comments>
 </div>
+
+
+
+<!-- data binding  -->
+<!-- types  -->
+<!-- interpolation --> 
+<!-- property binding [mnum]="num2"  -->
+<!-- event binding (click)="fun()"  -->
+<!-- two way binding [(ngModel)]="myData"  -->

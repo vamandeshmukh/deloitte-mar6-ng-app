@@ -11,18 +11,22 @@ import { BlogService } from 'src/app/services/blog.service';
 
 export class BlogDetailsComponent implements OnInit {
 
+  // int num = 10;
+  // let num = 10;
+  // let num: number = 10;
+
   blogData: Blog = {};
 
-  constructor(private blogService: BlogService, private activatedroute: ActivatedRoute) { }
+  constructor(private blogService: BlogService, private activatedroute: ActivatedRoute) {
+    
+   }
 
   ngOnInit(): void {
-
     this.blogService.getBlogById(this.activatedroute.snapshot.params['id'])
       .subscribe((resp) => {
         console.log(resp);
         this.blogData = resp;
       });
-
   };
 
 }

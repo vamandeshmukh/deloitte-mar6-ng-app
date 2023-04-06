@@ -9,7 +9,7 @@ import { CommentService } from 'src/app/services/comment.service';
 export class CommentsComponent implements OnInit {
 
   @Input()
-  blogId: any = '';
+  blogId: any = ''; // 22
   
   commentsData: any = [];
 
@@ -17,12 +17,11 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.blogId);
-    this.commentService.getCommentsByBlogId(this.blogId)
+    this.commentService.getCommentsByBlogId(this.blogId) // 22
       .subscribe((resp) => {
         console.log(resp);
         this.commentsData = resp;
       });
-
   }
-
 };
+

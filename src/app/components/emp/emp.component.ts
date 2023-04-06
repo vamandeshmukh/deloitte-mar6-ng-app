@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class EmpComponent {
 
+    empData = {
+        firstName: 'Sonu',
+        salary: 95000,
+    };
+
 }
 
