@@ -7,7 +7,7 @@ import { DeleteComponent } from './components/delete/delete.component';
 import { EmpComponent } from './components/emp/emp.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
@@ -20,6 +20,7 @@ import { ChildComponent } from './components/child/child.component';
 import { WriterComponent } from './components/writer/writer.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { WriteBlogComponent } from './components/write-blog/write-blog.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { WriteBlogComponent } from './components/write-blog/write-blog.component
     BrowserModule,
     AppRoutingModule,
     FormsModule, // include this for ngModel 
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule // for reactive forms 
   ],
   providers: [],
   bootstrap: [AppComponent]

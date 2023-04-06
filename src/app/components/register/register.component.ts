@@ -1,10 +1,9 @@
-// Forms in angular 
+// Forms in angular - https://angular.io/guide/forms-overview 
 // 1. template driven forms - https://angular.io/guide/forms
 // 2. reactive forms - https://angular.io/guide/reactive-forms 
 
-// 1. template driven form 
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -12,6 +11,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+
+
+  // 1. template driven form 
 
   registerData: any = { username: '', password: '' };
 
@@ -21,5 +23,17 @@ export class RegisterComponent {
     console.log(this.registerData);
   };
 
+  // 2. reactive form 
+
+  registerData2 = new FormGroup({
+    username: new FormControl(),
+    password: new FormControl()
+  });
+
+
+  submitRegister2 = () => {
+    console.log(this.registerData2.value);
+  };
 }
+
 

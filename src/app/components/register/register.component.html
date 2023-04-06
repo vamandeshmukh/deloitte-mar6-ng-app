@@ -2,11 +2,24 @@
     <h1>Register</h1>
     <p>Template Driven Form</p>
     <div>
-        <form (ngSubmit)="submitRegister(registerForm)" 
-        #registerForm="ngForm">
+        <form (ngSubmit)="submitRegister(registerForm)" #registerForm="ngForm">
             <input type=" text" name="username" ngModel>
             <input type="password" name="password" ngModel>
             <input type="submit" value="Register">
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<div>
+    <h1>Register</h1>
+    <p>Reactive Form</p>
+    <div>
+        <form [formGroup]="registerData2" (ngSubmit)="submitRegister2()">
+            <input type=" text" name="username" formControlName="username">
+            <input type="password" name="password" formControlName="password">
+            <input type="submit" value="Register" />
         </form>
     </div>
 </div>
