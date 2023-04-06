@@ -14,6 +14,7 @@ export class EmpComponent {
     empData = {
         firstName: 'Sonu',
         salary: 95000,
+        bonus: 15,
         birthDate: new Date(1947, 7, 15),
         // add other fields 
     };
