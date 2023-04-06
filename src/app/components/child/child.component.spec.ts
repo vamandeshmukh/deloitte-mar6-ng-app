@@ -5,21 +5,21 @@ import { By } from '@angular/platform-browser';
 
 import { ChildComponent } from './child.component';
 
-// describe('ChildComponent', () => {
+describe('ChildComponent', () => {
 
 
 
-//   // vars declaration 
+  // vars declaration 
 
-//   it('test aitnmetic op', () => {
-//     expect(10 + 10).toEqual(20);
-//   });
+  it('test aitnmetic op', () => {
+    expect(10 + 10).toEqual(20);
+  });
 
-//   it('test aitnmetic op', () => {
-//     expect(10 + 10).not.toEqual(21);
-//   });
+  it('test aitnmetic op', () => {
+    expect(10 + 10).toEqual(21);
+  });
 
-// });
+});
 
 describe('ChildComponent', () => {
   let component: ChildComponent;
