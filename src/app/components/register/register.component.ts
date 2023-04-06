@@ -12,7 +12,6 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
 })
 export class RegisterComponent {
 
-
   // 1. template driven form 
 
   registerData: any = { username: '', password: '' };

@@ -8,9 +8,9 @@ describe('ChildComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildComponent ]
+      declarations: [ChildComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ChildComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,13 @@ describe('ChildComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render Monu', () => {
+    const fixture = TestBed.createComponent(ChildComponent);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.getElementsByTagName('p').item).toBe('Monu');
+  });
+
 });
