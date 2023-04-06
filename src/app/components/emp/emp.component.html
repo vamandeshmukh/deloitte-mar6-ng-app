@@ -1,10 +1,14 @@
 <div>
     <p>Emp component works!</p>
     <p>Name: {{empData.firstName}} </p>
+    <p>Birth date: {{empData.birthDate}} </p>
+    <p>Birth date: {{empData.birthDate | date }} </p>
+    <p>Birth date: {{empData.birthDate | date : 'd MMM y'}} </p>
     <p>Salary: {{empData.salary}} </p>
     <p>Salary: {{empData.salary | currency}} </p>
     <p>Salary: {{empData.salary | currency : 'INR'}} </p>
     <p>Salary: {{empData.salary | currency : 'USD'}} </p>
     <p>Salary: {{empData.salary | currency : 'GBP'}} </p>
     <p>Salary: {{empData.salary | currency : 'EUR'}} </p>
+
 </div>

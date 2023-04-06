@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class EmpComponent {
 
+    // reference - 
+    // https://angular.io/guide/pipes
+    // https://angular.io/guide/pipes-overview
+
     empData = {
         firstName: 'Sonu',
         salary: 95000,
+        birthDate: new Date(1947, 7, 15),
+        // add other fields 
     };
 
 }
