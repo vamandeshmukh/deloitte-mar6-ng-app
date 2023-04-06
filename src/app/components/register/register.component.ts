@@ -1,9 +1,10 @@
 // Forms in angular 
-// 1. template driven forms 
-// 2. reactive forms 
+// 1. template driven forms - https://angular.io/guide/forms
+// 2. reactive forms - https://angular.io/guide/reactive-forms 
 
+// 1. template driven form 
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -14,14 +15,10 @@ export class RegisterComponent {
 
   registerData: any = { username: '', password: '' };
 
-  constructor(private userService: UserService) { }
-
-  submitRegister = () => {
-    this.userService.register(this.registerData)
-      .subscribe((resp: any) => {
-        console.log(resp);
-      }
-      );
+  submitRegister = (regForm: NgForm) => {
+    console.log(regForm.value);
+    this.registerData = regForm.value;
+    console.log(this.registerData);
   };
 
 }

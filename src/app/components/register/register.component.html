@@ -1,6 +1,12 @@
 <div>
     <h1>Register</h1>
     <div>
-        register form
+        <form 
+        (ngSubmit)="submitRegister(registerForm)" 
+        #registerForm="ngForm">
+            <input type=" text" name="username" ngModel>
+            <input type="password" name="password" ngModel>
+            <input type="submit" value="Register">
+        </form>
     </div>
 </div>
