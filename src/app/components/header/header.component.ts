@@ -12,5 +12,7 @@ export class HeaderComponent {
 
   loggedInUserData = this.userService.getUserData();
 
+  randomBlogId: number = 25;
+
 
 }
