@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -6,13 +6,21 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  constructor(private userService: UserService) { };
+  loggedInUserData: any = {};
+  randomBlogId: number = 100;
 
-  loggedInUserData = this.userService.getUserData();
+  constructor(private userService: UserService) { }
 
-  randomBlogId: number = 25;
+  ngOnInit(): void {
 
+    this.loggedInUserData = this.userService.getUserData();
+    console.log(this.loggedInUserData);
+
+    setInterval(() => {
+      this.randomBlogId = Math.floor((Math.random() * 100) + 1);
+    }, 60000);
+  };
 
 }
